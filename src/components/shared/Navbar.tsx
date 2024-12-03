@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 /* eslint-disable @next/next/no-img-element */
 'use client';
 import Image from 'next/image';
@@ -5,12 +6,12 @@ import Link from 'next/link';
 
 
 
-import { AiOutlineMenu, AiOutlineShoppingCart } from 'react-icons/ai';
+import { AiOutlineMenu } from 'react-icons/ai';
 
 import { useState } from 'react';
 
 // import { usePathname } from 'next/navigation'; 
-import { Button, ConfigProvider, Select } from 'antd';
+import {  ConfigProvider, Select } from 'antd';
 
 import { TbChevronDown, TbWorld } from 'react-icons/tb';
 import MobileDrawer from '../ui/sharedComponents/MobileDrawer';
@@ -40,7 +41,7 @@ const Navbar = () => {
         { key: 'restaurants', label: 'Restaurants', path: '/restaurants', icon: <IoRestaurantOutline size={22} />},
         { key: 'how-we-work', label: 'How we work', path: '/how-we-work', icon: <BriefcaseBusiness size={22} /> },
         { key: 'about-us', label: 'About Us', path: '/about-us', icon: <BadgeInfo size={22} /> },
-        { key: 'contact-us', label: 'Contact Us', path: '/contact-us', icon: <ContactRound size={22} /> },
+        { key: 'contact-us', label: 'Contact Us', path: '/contact', icon: <ContactRound size={22} /> },
       ]; 
     return ( 
         <div>

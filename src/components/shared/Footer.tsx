@@ -120,16 +120,17 @@ export const Footer = () => {
                                 >
                                     <Input
                                         style={{
-                                            height: 42,
+                                            height: 55, 
+                                            width: 337,
                                         }}
                                         placeholder="Enter Email"
                                         className=" bg-[#181D21] border border-transparent placeholder-[#A5A5A5] rounded-lg  footerInput" 
                                         suffix={ <button 
                                             style={{
-                                                height: 42,
+                                                height: 55,
                                             }}
                                             type="submit"
-                                            className="bg-primary text-white w-16 rounded-lg flex items-center justify-center"
+                                            className="bg-primary text-white w-16 rounded-r-lg flex items-center justify-center"
                                         >
                                             <Send size={24} />
                                         </button>}
