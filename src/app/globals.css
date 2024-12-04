@@ -17,4 +17,24 @@
 
    .footerInput.ant-input-affix-wrapper >input.ant-input {
     color: white; 
-   }
+   } 
+
+   .swal-popup {
+    font-family: "Montserrat", sans-serif; /* Optional: use your desired font */
+  }
+  
+  .swal-title {
+    font-size: 24px; 
+    color: #ED6923;
+  }
+  
+  .swal2-success [class^=swal2-success-line] {
+    background-color: #ED6923 !important;
+  }
+
+  .swal2-success .swal2-success-ring { 
+    border: 3px solid #ED6923 !important;
+    color: #ED6923 !important;
+   } 
+
+   
