@@ -1,8 +1,9 @@
+import Home from "@/components/ui/website/Home/Home";
 
-export default function Home() {
+export default function HomePage() {
   return (
-<div className=" flex items-center justify-center min-h-screen  font-semibold text-primary text-4xl "> 
-  hello 
+<div className="  "> 
+   <Home />
 </div>
   );
 }

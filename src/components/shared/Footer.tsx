@@ -28,17 +28,16 @@ const linkSections = [
         links: [
             { label: 'About Us', href: '/about-us' },
             { label: 'How We works', href: '/how-we-work' },
-            { label: 'Career', href: '/career' },
-            { label: 'Help & Support', href: '/help' },
+            // { label: 'Career', href: '/career' },
+            { label: 'Contact Us', href: '/contact' }, 
         ],
     },
     {
         title: 'Resources',
         links: [
+            { label: 'FAQ', href: '/faq' },
             { label: 'Privacy Policy', href: '/privacy' },
             { label: 'Terms & Conditions', href: '/terms' },
-            { label: 'FAQ', href: '/faq' },
-            { label: 'Become a Rider', href: '/rider' },
         ],
     },
 ];
@@ -145,7 +144,7 @@ export const Footer = () => {
 
                 {/* Copyright Section */}
                 <div className="mt-16 pt-8 border-t border-white/10 text-center">
-                    <p>All right reserved Hightimes Barcelona {new Date().getFullYear()}</p>
+                    <p>© 2024 Tweet. All Rights Reserved {new Date().getFullYear()}</p>
                 </div>
             </div>
         </footer>

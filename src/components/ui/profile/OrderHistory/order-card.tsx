@@ -1,5 +1,8 @@
 
+"use client";
 import Image from 'next/image'
+import { useState } from 'react';
+import OrderDetailsModal from './OrderDetailsModal';
  
 export interface Order {
     id: string;
@@ -16,7 +19,10 @@ interface OrderCardProps {
   order: Order
 }
 
-export function OrderCard({ order }: OrderCardProps) {
+export function OrderCard({ order }: OrderCardProps) { 
+
+  const [open , setOpen] = useState(false)
+   
   const getStatusColor = (status: Order['status']) => {
     switch (status) {
       case 'Pending':
@@ -55,10 +61,11 @@ export function OrderCard({ order }: OrderCardProps) {
 
       <div className="flex justify-between items-center mt-6">
         <p className="text-[16px] "> <span className='text-gray-500'> Total Amount: </span> <span className='text-[#3D3D3D] font-medium'> ${order.amount.toFixed(2)} </span> </p>
-        <button className="h-[45px] px-6 text-sm border border-primary text-primary font-medium rounded-lg hover:bg-primary hover:text-white ">
+        <button className="h-[45px] px-6 text-sm border border-primary text-primary font-medium rounded-lg hover:bg-primary hover:text-white " onClick={() => setOpen(true)}>
           Details
         </button>
-      </div>
+      </div> 
+      <OrderDetailsModal open={open} setOpen={setOpen} />
     </div>
   )
 }

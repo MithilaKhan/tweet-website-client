@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 import { Dispatch, SetStateAction } from 'react';
 import NavItems from './NavItems';
 import { Drawer } from 'antd';

@@ -1,6 +1,11 @@
 @tailwind base;
 @tailwind components;
-@tailwind utilities;
+@tailwind utilities; 
+
+/* slick-carousel styles */
+@import "~slick-carousel/slick/slick.css";
+@import "~slick-carousel/slick/slick-theme.css";
+ 
 
 .ant-form-item {
     margin-bottom: 15px !important;
@@ -17,6 +22,19 @@
 
    .footerInput.ant-input-affix-wrapper >input.ant-input {
     color: white; 
+   }  
+
+  .heroInput.ant-input-affix-wrapper { 
+ padding: 4px  0px 4px 10px !important;
+  } 
+
+  .heroInput.ant-input-outlined { 
+    background:white !important; 
+    border: 1px solid #ED6923  !important; 
+   } 
+
+   .heroInput.ant-input-affix-wrapper >input.ant-input {
+    color: #333333; 
    } 
 
    .swal-popup {
@@ -36,5 +54,26 @@
     border: 3px solid #ED6923 !important;
     color: #ED6923 !important;
    } 
+
+
+   /* Ant Design Custom Styles */
+.ant-input-affix-wrapper {
+  border-radius: 0.5rem !important;
+  padding: 8px 16px !important;
+}
+
+.ant-input-affix-wrapper:hover,
+.ant-input-affix-wrapper:focus,
+.ant-input-affix-wrapper-focused {
+  border-color: #FF6B35 !important;
+  box-shadow: none !important;
+}
+
+
+
+.ant-rate {
+  font-size: 14px !important;
+}
+
 
    
