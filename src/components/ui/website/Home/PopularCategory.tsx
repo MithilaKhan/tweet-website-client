@@ -9,10 +9,13 @@ import category1 from "@/assests/category1.svg"
 import category2 from "@/assests/category2.svg"
 import category3 from "@/assests/category3.svg"
 import category4 from "@/assests/category4.svg"
-import category5 from "@/assests/category5.svg" 
+import category5 from "@/assests/sorma.svg" 
 import Heading from "@/components/shared/Heading"; 
 import CommontypeTitle from "@/components/shared/CommontypeTitle";
-
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css"; 
+import Slider, { Settings } from "react-slick";
+import { FaArrowLeftLong, FaArrowRightLong } from "react-icons/fa6";
 
 export interface FoodItem {
     id: number;
@@ -81,49 +84,150 @@ export interface FoodItem {
 
 const PopularCategory = () => {
  
-  const router = useRouter();
+  const router = useRouter();  
+  const [activeIndex, setActiveIndex] = useState(0); 
+  const CustomNextArrow = ({ onClick  }: { onClick?: () => void }) => (
+    <div
+ className=" absolute  -right-10 top-1/3 cursor-pointer   "
+      onClick={onClick}
+    > 
+    <div className="w-10 h-10 bg-white/80  rounded-full flex items-center justify-center shadow-md">
+
+      <FaArrowRightLong color="#767676" size={20} />
+    </div>
+    </div>
+  );
   
+  const CustomPrevArrow = ({ onClick }: { onClick?: () => void }) => (
+    <div
+      className="absolute  -left-7 top-1/3 cursor-pointer z-30"
+      onClick={onClick}
+    > 
+    <div className=" w-10 h-10 bg-white/80  rounded-full flex items-center justify-center shadow-md">
+
+      <FaArrowLeftLong color="#767676" size={20} />
+    </div>
+    </div>
+  ); 
+
+  
+  const settings: Settings = {
+    infinite: false,
+    speed: 500,
+    initialSlide: 0,
+    // arrows: true, 
+    slidesToShow: 7,
+    slidesToScroll: 1,
+    autoplay: false,
+    dots: true,
+    autoplaySpeed: 2000, 
+    nextArrow: <CustomNextArrow />,
+  prevArrow: <CustomPrevArrow />,
+    beforeChange: (current, next) => setActiveIndex(next),
+    customPaging: (i) => (
+      <div
+        style={{
+          width: "35px",
+          height: "3px",
+          borderRadius: "5px",
+          backgroundColor: i === activeIndex ? "#ED6923" : "#D3D3D3",
+          cursor: "pointer",
+          transition: "background-color 0.3s ease",
+          marginTop: "20px"
+        }}
+      />
+    ),
+    appendDots: (dots) => (
+      <div
+        style={{
+          display: "flex",
+          justifyContent: "center",
+          padding: "10px",
+          gap: "10px"
+        }}
+      >
+        {dots}
+      </div>
+    ),
+
+    responsive: [
+      {
+        breakpoint: 1024,
+        settings: {
+          slidesToShow: 3,
+          slidesToScroll: 1,
+          infinite: true,
+        },
+      },
+      {
+        breakpoint: 600,
+        settings: {
+          slidesToShow: 2,
+          slidesToScroll: 1,
+          initialSlide: 2,
+        },
+      },
+      {
+        breakpoint: 480,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1,
+        },
+      },
+    ],
+  }; 
+   
+
+
 
   return (
-    <div className="py-[72px] container">
+    <div className="py-[72px] flex items-center justify-center "> 
+    <div>
+
       {/* Heading */}
-      <div className=" pb-[36px]  ">
+      <div className=" pb-[36px] container ">
           <CommontypeTitle className="" title="Category" /> 
         <Heading title1="Popular" title2="Categories" className=" " />
         </div>
 
       {/* Slider */}
-      <div className="w-full flex items-center justify-center container">
-        <div className=" flex  gap-3 ">
+      <div className="w-full ">
+      <div className=" lg:w-[1300px] md:w-full w-full ">
+          <Slider {...settings}>
        
             {foodData.map((data) => (
               <div
                 key={data.id}
-                onClick={() => router.push("/contractor")}
-                className="flex justify-center items-center"
+                onClick={() => router.push(`/category?category=${data.name}`)}
+                className="flex justify-center items-center relative p-4 cursor-pointer "
               >
                 <div
-                  className="w-40 h-40 rounded-lg shadow-lg flex flex-col justify-center items-center p-4"
+                  className="w-40 h-[128px] rounded-lg  flex flex-col justify-end items-center pt-1  "
                   style={{ backgroundColor: data.bgColor }}
-                >
-                  <div className="relative w-24 h-24">
+                > 
+                  <div className=" z-20  absolute -top-0 ">
                     <Image
                       src={data.image}
-                      alt={data.name}
-                      layout="fill"
-                      objectFit=""
+                      alt={data.name} 
+                      width={139} 
+                      height={94}
+                    
+                 className="z-20 pt-1"
                     />
                   </div>
-                  <p className="text-white text-lg font-semibold mt-4">
+                  <p className="text-white text-lg font-semibold px-4">
                     {data.name}
                   </p>
                 </div>
               </div>
             ))}
+          </Slider>
+        </div> 
         
         </div>
-      </div>
     </div>
+      </div>
+   
   );
 };
 

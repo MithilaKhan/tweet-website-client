@@ -2,7 +2,7 @@ import React from 'react';
 
 
 interface IButtonProps {
-  title1: string; 
+  title1: string | null; 
   title2: string;
   className: string;
 }

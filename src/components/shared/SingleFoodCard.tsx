@@ -1,6 +1,6 @@
 /* eslint-disable @next/next/no-img-element */
 import React from 'react';
-import { Card } from "antd";
+
 import { ClockCircleOutlined } from "@ant-design/icons";
 import { FaPlus } from "react-icons/fa";
 import { IoBicycle, IoHeart } from "react-icons/io5";
@@ -24,10 +24,10 @@ interface ItemType {
 }
 const SingleFoodCard = ({ item }: ItemType) => {
     return (
-        <Card
+        <div 
 
-            className="relative overflow-hidden shadow-md hover:shadow-lg transition-shadow"
-            cover={
+            className="relative overflow-hidden shadow-md hover:shadow-lg transition-shadow bg-white rounded-lg lg:w-[297px] w-full" >
+        
                 <div className="relative">
                     <img
                         alt={item.title}
@@ -57,10 +57,9 @@ const SingleFoodCard = ({ item }: ItemType) => {
                     </div>
 
                 </div>
-            }
-            bodyStyle={{ padding: "12px" }}
-        >
-            <div className="space-y-2">
+           
+       
+            <div className="space-y-2 p-3">
                 <div className=" flex items-center justify-between ">
 
                     <h3 className="font-semibold text-[#333333]  text-[18px]">{item.title}</h3>
@@ -97,7 +96,7 @@ const SingleFoodCard = ({ item }: ItemType) => {
                     </button>
                 </div>
             </div>
-        </Card>
+        </div>
     );
 };
 

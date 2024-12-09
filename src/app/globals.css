@@ -73,6 +73,62 @@
 
 .ant-rate {
   font-size: 14px !important;
+} 
+
+
+/* Custom styles for Ant Design Carousel dots */
+.custom-dots {
+  bottom: -30px !important;
+}
+
+.custom-dots li button {
+  background: #D1D5DB !important;
+  opacity: 0.5;
+  width: 8px !important;
+  height: 8px !important;
+  border-radius: 50% !important;
+}
+
+.custom-dots li.slick-active button {
+  background: #F97316 !important;
+  opacity: 1;
+  width: 24px !important;
+  border-radius: 4px !important;
+}
+ 
+
+
+/* Custom styles for Ant Design white checkboxes */
+.antd-checkbox-white .ant-checkbox-inner {
+  background-color: transparent !important;
+  border-color: white !important;
+}
+
+.antd-checkbox-white .ant-checkbox-checked .ant-checkbox-inner {
+  background-color: white !important;
+  border-color: white !important;
+}
+
+.antd-checkbox-white .ant-checkbox-checked .ant-checkbox-inner::after {
+  border-color: #E85D24 !important;
+}
+
+.antd-checkbox-white .ant-checkbox-wrapper:hover .ant-checkbox-inner,
+.antd-checkbox-white .ant-checkbox:hover .ant-checkbox-inner {
+  border-color: white !important;
+}
+
+.antd-checkbox-white.ant-checkbox-wrapper {
+  color: white !important;
+}
+
+.antd-checkbox-white .ant-checkbox + span {
+  color: white !important;
+}
+
+.ant-rate {  
+  color: #ED6923 !important; 
+  font-size: 22px;
 }
 
 
