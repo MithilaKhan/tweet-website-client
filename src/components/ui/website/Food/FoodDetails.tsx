@@ -5,8 +5,10 @@ import Image from 'next/image';
 import React, { useState } from 'react';
 import Cart from './Cart';
 import { LuBadgeInfo } from 'react-icons/lu';
-import { IoBicycle, IoLocationOutline } from 'react-icons/io5'; 
+import { IoBicycle, IoLocationOutline } from 'react-icons/io5';
 import SingleFoodCard from '@/components/shared/SingleFoodCard';
+import ReviewsModal from './ReviewsModal';
+import MoreInfo from './MoreInfo';
 
 const foodItems = [
     {
@@ -185,16 +187,16 @@ const foodItems = [
         discount: "50% OFF",
         deliveryPrice: "$02"
     }
-]; 
+];
 
 const FoodDetails = () => {
     const [reviews, setReviews] = useState(false);
     const [info, setInfo] = useState(false);
-    const [activeFilter, setActiveFilter] = useState("Popular"); 
-    const [visibleCount, setVisibleCount] = useState(8); 
+    const [activeFilter, setActiveFilter] = useState("Popular");
+    const [visibleCount, setVisibleCount] = useState(8);
 
     const handleSeeMore = () => {
-      setVisibleCount((prevCount) => prevCount + 8); 
+        setVisibleCount((prevCount) => prevCount + 8);
     };
 
     const filters = ["Popular", "Pizza", "Burger", "Set Meals"];
@@ -273,29 +275,31 @@ const FoodDetails = () => {
 
             {/* Content */}
             <div className=" grid grid-cols-12 gap-[10%] container mt-[50px]">
-                {/* Menu Items */} 
-                <div className='col-span-6 mb-16'> 
-                <div className=" grid grid-cols-2 gap-6 ">
-                {foodItems.slice(0, visibleCount).map((item) => <div key={item.id} className=' ' > <SingleFoodCard item={item} /></div>)}   
-                </div>
-                {visibleCount < foodItems.length && ( 
-        <div className="flex items-center justify-center mt-[50px]">
-          <button
-            className="px-6 py-2 bg-primary text-white rounded h-[50px]"
-            onClick={handleSeeMore}
-          >
-            See More
-          </button>
-        </div>
-      )}
-               
+                {/* Menu Items */}
+                <div className='col-span-6 mb-16'>
+                    <div className=" grid grid-cols-2 gap-6 ">
+                        {foodItems.slice(0, visibleCount).map((item) => <div key={item.id} className=' ' > <SingleFoodCard item={item} /></div>)}
+                    </div>
+                    {visibleCount < foodItems.length && (
+                        <div className="flex items-center justify-center mt-[50px]">
+                            <button
+                                className="px-6 py-2 bg-primary text-white rounded h-[50px]"
+                                onClick={handleSeeMore}
+                            >
+                                See More
+                            </button>
+                        </div>
+                    )}
+
                 </div>
 
                 {/* Cart */}
                 <div className="col-span-6  mb-[50px]">
                     <Cart />
                 </div>
-            </div>
+            </div> 
+            <ReviewsModal open={reviews} onClose={() => setReviews(false)} /> 
+            <MoreInfo open={info} onClose={() => setInfo(false)} />
         </div>
     );
 };

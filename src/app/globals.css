@@ -31,7 +31,20 @@
   .heroInput.ant-input-outlined { 
     background:white !important; 
     border: 1px solid #ED6923  !important; 
-   } 
+   }  
+
+  .checkout.ant-input-outlined { 
+    background:white !important; 
+    border: 1px dotted #b8b6b5  !important; 
+   }  
+
+   .heroInput.ant-input-affix-wrapper { 
+    padding: 4px  0px 4px 10px !important;
+     }
+     
+     .checkout.ant-input-affix-wrapper { 
+    padding: 4px  0px 4px 10px !important;
+     }  
 
    .heroInput.ant-input-affix-wrapper >input.ant-input {
     color: #333333; 
@@ -129,7 +142,36 @@
 .ant-rate {  
   color: #ED6923 !important; 
   font-size: 22px;
+} 
+
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
 }
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #dfdfdf00;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+
+  /* background: #6b5ecc34;  */
+  background: #ffffff67;
+  border-radius: 10px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #6b5ecc34;
+} 
+
+.food.ant-modal .ant-modal-close { 
+color: #ED6923 !important; 
+
+}
+
 
 
    

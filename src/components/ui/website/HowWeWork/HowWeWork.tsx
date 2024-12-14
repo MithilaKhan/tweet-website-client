@@ -46,7 +46,7 @@ const HowWeWork = () => {
         <div>
              <CommonBanner title='How we work' /> 
 
-             <div className="py-[184px]"> 
+             <div className="py-[100px]"> 
              <div className="container ">
       <div className=" mx-auto ">
         <div className="text-center mb-6">

@@ -1,11 +1,13 @@
+"use client"
 /* eslint-disable @next/next/no-img-element */
-import React from 'react';
+import React, { useState } from 'react';
 
 import { ClockCircleOutlined } from "@ant-design/icons";
 import { FaPlus } from "react-icons/fa";
-import { IoBicycle, IoHeart } from "react-icons/io5";
+import { IoBicycle, IoHeart, IoHeartSharp } from "react-icons/io5";
 import { PiSealPercentLight } from "react-icons/pi";
 import { TiStarFullOutline } from "react-icons/ti";
+import { GoHeart, GoHeartFill } from 'react-icons/go';
 
 interface Item {
     id: number;
@@ -22,7 +24,14 @@ interface Item {
 interface ItemType {
     item: Item;
 }
-const SingleFoodCard = ({ item }: ItemType) => {
+const SingleFoodCard = ({ item }: ItemType) => { 
+    const [isFavorite, setIsFavorite] = useState(false) 
+    console.log(isFavorite);
+    const handleFavorite = (e: React.MouseEvent) => {
+        e.stopPropagation();
+        e.preventDefault();
+        setIsFavorite(!isFavorite)
+    }
     return (
         <div 
 
@@ -42,13 +51,23 @@ const SingleFoodCard = ({ item }: ItemType) => {
 
                     > <p> <PiSealPercentLight size={20} /> </p>  <p className="font-semibold"> {item.discount} </p>  </div>
 
-                    <div className=" absolute top-3 right-2 w-10 h-10 bg-white/80  rounded-full flex items-center justify-center">
+                    <div className=" absolute top-3 right-2 w-10 h-10 bg-white/80  rounded-full flex items-center justify-center" >
+                        <p onClick={(e) => handleFavorite(e)} >
 
-                        <IoHeart
+                    {isFavorite ? (
+                        <GoHeartFill 
                             size={24}
-                            className="  text-xl"
+                            className="text-xl"
                             color="#ED6923"
                         />
+                    ) : (
+                        <GoHeart
+                            size={24}
+                            className="text-xl"
+                            color="#ED6923"
+                        />
+                    )}
+                        </p>
                     </div>
 
                     <div className="flex items-center text-[#333333] text-sm bg-white/80 absolute bottom-3 right-2 px-3 py-1 rounded-full font-medium">

@@ -16,7 +16,7 @@ import {  ConfigProvider, Select } from 'antd';
 import { TbChevronDown, TbWorld } from 'react-icons/tb';
 import MobileDrawer from '../ui/sharedComponents/MobileDrawer';
 import NavItems from '../ui/sharedComponents/NavItems';
-import { BadgeInfo, Bell, BriefcaseBusiness, ContactRound, Heart, House, ShoppingCart } from 'lucide-react';
+import { BadgeInfo, BriefcaseBusiness, ContactRound, Heart, House, ShoppingCart } from 'lucide-react';
 import { IoRestaurantOutline } from 'react-icons/io5';
 
 const Navbar = () => {  
@@ -63,14 +63,13 @@ const Navbar = () => {
                     </div> 
 
                     <div className="flex items-center space-x-4">
-                         <p><Heart size={26} color='#ED6923' /></p>
-                         <p><Bell size={26} color='#ED6923' /></p>
-                         <p><ShoppingCart size={26} color='#ED6923' /></p> 
+                         <Link     href={'/favorite'} ><Heart size={26} color='#ED6923' /></Link>
+                         <Link href={`/food/1`}><ShoppingCart size={26} color='#ED6923' /></Link> 
 
-                         <div className=' flex items-center gap-2'> 
+                         <Link href={'/profile'} className=' flex items-center gap-2' > 
                             <Image src="/person.png" alt="" height={40} width={40} className=" h-auto w-auto rounded-full border-[2px] border-primary"  /> 
                             <p>Asad</p>
-                         </div>
+                         </Link>
  
                          <ConfigProvider
   theme={{

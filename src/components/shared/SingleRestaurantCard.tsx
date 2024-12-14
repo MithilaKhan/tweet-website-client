@@ -2,7 +2,7 @@
 import React from 'react';
 
 import { ClockCircleOutlined } from "@ant-design/icons";
-import { FaPlus } from "react-icons/fa";
+
 import { IoBicycle } from "react-icons/io5";
 import { PiSealPercentLight } from "react-icons/pi";
 import { TiStarFullOutline } from "react-icons/ti";
@@ -56,39 +56,43 @@ const SingleRestaurantCard = ({ item }: ItemType) => {
         <div className="space-y-2 p-3">
             <div className=" flex items-center justify-between ">
 
-                <h3 className="font-semibold text-[#333333]  text-[18px]">{item.title}</h3>
+                <h3 className="font-semibold text-[#333333]  text-[18px]"> {item.restaurant}</h3>
 
-                <div className="flex flex-col ">
-                    <p className=" text-gray-500 text-[17px] decoration-1 font-medium line-through"> € 40 </p>
-                    <p className="font-bold text-primary text-[18px]">{item.price}</p>
-                </div>
-            </div>
-            <div className="flex items-center text-[#262626] text-[16px]">
-                <img
-                    src="/resturentlogo.png"
-                    alt="Restaurant Logo"
-                    className="w-4 h-4 mr-1"
-                />
-               <p className=' text-[16px] font-normal'>   {item.restaurant} </p> 
             </div>
 
             <div className="flex items-center justify-between pt-2">
-                <div className="flex items-center  gap-2">
-                    <div className="flex items-center text-[#5C5C5C] font-medium  text-sm">
-                        <ClockCircleOutlined size={16} className="mr-1" />
+                <div className="flex items-center justify-between  gap-2">
+                    <div className="flex items-center text-primary font-medium  text-sm">
+                        <ClockCircleOutlined size={16} color='#5C5C5C' className="mr-1" />
                         {item.time}
                     </div>
-                    <div className="flex items-center text-[#5C5C5C] font-medium  text-sm">
-                        <IoBicycle size={20} className="mr-1" />
-                        {item.deliveryPrice}
+                    <div className="flex items-center text-primary font-medium  text-sm">
+                        <IoBicycle size={20} color='#5C5C5C' className="mr-1" />
+                        Delivery Fee  {item.deliveryPrice}
                     </div>
 
                 </div>
 
-                <button className="bg-primary text-white rounded-full w-9 h-9 flex  font-extrabold items-center justify-center text-xl">
-                    <FaPlus size={17} />
-                </button>
+             
+            </div>   
+
+            <div className='flex items-center gap-2 pb-2'>
+{
+            ["Pizza", "Burger", "Sandwich", "Biryani"].map((item, index) => {
+  return (
+    <div
+      key={index} 
+      className="flex items-center gap-2 text-[#767676] text-sm font-[400] "
+    >
+      {item} |
+    </div>
+  );
+})
+}
+
             </div>
+
+             
         </div>
     </div>
     );
