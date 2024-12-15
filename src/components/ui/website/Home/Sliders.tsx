@@ -109,10 +109,10 @@ const Sliders = () => {
     {
         sliderImages?.map((item, index) => (
             <div key={index} className=' flex  '>  
-            <div className='flex items-center  justify-center gap-6'> 
+            <div className='flex lg:flex-row flex-col items-center  justify-center lg:gap-6 gap-0'> 
 
          
-                <img src={item.image1} alt="Slider 1" className=' h-[370px]  ' />
+                <img src={item.image1} alt="Slider 1" className=' lg:h-[370px] h-[200px] object-cover ' />
         
           
               <img src={item.image2} alt="Slider 2" className='  ' /> 

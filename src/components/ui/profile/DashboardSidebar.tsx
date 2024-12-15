@@ -37,11 +37,6 @@ const sidebarItems = [
   icon: <PiSealPercent className="w-5 h-5" />,
 },
   {
-    title: 'Help',
-    href: '/help',
-    icon: <FiHelpCircle className="w-5 h-5" />,
-  },
-  {
     title: 'Log Out',
     href: '/login',
     icon: <RiLogoutBoxLine className="w-5 h-5" />,

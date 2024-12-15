@@ -38,7 +38,8 @@ const ReviewsModal: React.FC<ReviewsModalProps> = ({ open, onClose }) => {
         <Modal
         open={open}
         onCancel={onClose}
-        footer={null}
+        footer={null} 
+        centered
         title={
           <div className="flex-col items-center mt-3 ">
             <h3 className="text-lg font-semibold">Reviews</h3>
@@ -58,7 +59,7 @@ const ReviewsModal: React.FC<ReviewsModalProps> = ({ open, onClose }) => {
 
             <div className="flex-1">
               {[5, 4, 3, 2, 1].map((rating) => (
-                <div key={rating} className="flex items-center gap-2 mb-1">
+                <div key={rating} className="flex items-center  gap-2 mb-1">
                   <span className="text-sm w-3">{rating}</span>
                   <Progress 
                     percent={ratingStats[rating as keyof typeof ratingStats]} 
@@ -66,7 +67,7 @@ const ReviewsModal: React.FC<ReviewsModalProps> = ({ open, onClose }) => {
                     showInfo={false}
                     strokeColor="#f97316"
                   />
-                  <span className="text-xs text-gray-500 w-8">
+                  <span className="text-xs text-gray-500 lg:w-8 w-[270px] text-center">
                     {ratingStats[rating as keyof typeof ratingStats]}%
                   </span>
                 </div>

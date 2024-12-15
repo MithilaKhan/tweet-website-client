@@ -27,7 +27,7 @@ const SingleRestaurantCard = ({ item }: ItemType) => {
     return (
         <div 
 
-        className="relative overflow-hidden shadow-md hover:shadow-lg transition-shadow bg-white rounded-lg lg:w-[297px] w-full" >
+        className="relative overflow-hidden shadow-md hover:shadow-lg transition-shadow bg-white rounded-lg w-[297px] " >
     
             <div className="relative">
                 <img

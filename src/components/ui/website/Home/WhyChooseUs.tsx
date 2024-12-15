@@ -24,7 +24,7 @@ const WhyChooseUs = () => {
       
     return (
         <div 
-        className="h-[694px] flex items-center justify-center z-30"
+        className="lg:h-[694px] h-full flex items-center justify-center z-30"
         style={{
           backgroundImage: `url('/bg.svg')`,
           backgroundSize: 'cover', 
@@ -36,7 +36,7 @@ const WhyChooseUs = () => {
         > 
          <div> 
 
-        <div className=' text-center pb-[50px]'> 
+        <div className=' text-center lg:pb-[50px] pb-[20px]'> 
       <CommontypeTitle className="" title='Why Tweet?' /> 
           <Heading className="" title1="Why you " title2="Choose Us ?" />
        
@@ -46,20 +46,20 @@ const WhyChooseUs = () => {
       <div className="container mx-auto">
   
         
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-3 lg:gap-8 gap-4">
           {features.map((feature, index) => (
             <div 
               key={index}
-              className="bg-white p-8 rounded-lg text-center transition-transform hover:scale-105"
+              className="bg-white lg:p-8 p-4 rounded-lg text-center transition-transform hover:scale-105"
             >
-              <div className="flex justify-center mb-6"> 
-                <img src={feature.image} alt={feature.title}  className='h-[100px] w-[100px]' />
+              <div className="flex justify-center lg:mb-6 mb-2"> 
+                <img src={feature.image} alt={feature.title}  className='lg:h-[100px] h-[50px] lg:w-[100px] w-[50px]' />
                
               </div>
-              <h3 className="text-xl font-semibold mb-4">
+              <h3 className="lg:text-xl text-[18px] font-semibold lg:mb-4 mb-2">
                 {feature.title}
               </h3>
-              <p className="text-[#262626] text-[16px] leading-relaxed">
+              <p className="text-[#262626] lg:text-[16px] text-[14px] lg:leading-relaxed ">
                 {feature.description}
               </p>
             </div>

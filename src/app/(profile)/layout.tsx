@@ -10,10 +10,10 @@ const layout = ({children}: {children: React.ReactNode}) => {
         <CommonBanner title="Profile" />
         <div className="py-[40px] bg-[#FDF0E9]">
             <div className="container grid grid-cols-12 gap-4">
-                <div className="col-span-3 rounded-lg shadow-lg bg-white h-[80vh] sticky top-10">
+                <div className="lg:col-span-3 col-span-12 rounded-lg shadow-lg bg-white lg:h-[80vh] h:[60vh] lg:sticky top-10">
                     <DashboardSidebar />
                 </div>
-                <div className="col-span-9 rounded-xl ">{children}</div>
+                <div className="lg:col-span-9 col-span-12 rounded-xl ">{children}</div>
             </div>
         </div>
     </div>

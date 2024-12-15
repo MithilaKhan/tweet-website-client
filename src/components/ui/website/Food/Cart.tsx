@@ -39,7 +39,7 @@ const items = [
     }
 ]; 
 
-const Cart = () => { 
+const  Cart = () => { 
     const router =  useRouter()
     const [quantities, setQuantities] = useState(
         items.reduce((acc, item) => ({ ...acc, [item.id]: item.quantity }), {})
@@ -67,7 +67,7 @@ const Cart = () => {
     const total = subtotal + deliveryFee + vat;
 
     return (
-        <div className="bg-white rounded-lg p-[50px] shadow-sm sticky top-10">
+        <div className="bg-white rounded-lg p-[50px] shadow-sm sticky top-10 lg:mb-20">
             <div className="   mb-[50px]  flex items-center justify-center">
                 <p className=" flex flex-col  py-2 bg-primary text-white w-[177px] rounded text-center   ">
                     <span className=' font-medium  text-[14px]'> Delivery in </span>
@@ -110,7 +110,7 @@ const Cart = () => {
                                 <div key={index}>• {detail}</div>
                             ))}
                         </div>
-                        <div className="flex items-center justify-end">
+                        <div className="flex items-center justify-end lg:mt-1  mt-4">
                             <div className="flex items-center px-4 py-2 justify-between bg-white border border-[#FDF0E9] rounded-md shadow-md w-[120px] gap-3 shadow-[#FDF0E9]">
                                 <Button
                                     size="small"

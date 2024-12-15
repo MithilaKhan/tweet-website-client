@@ -8,7 +8,7 @@ interface IButtonProps {
 }
 
 const Heading : React.FC<IButtonProps> = ({ title1, title2, className }) => {
-    return <div  className={` text-[#343B46]  font-[600] lg:text-[40px] text-[28px]  ${className}`} >
+    return <div  className={` text-[#343B46]  font-[600] lg:text-[40px] text-[24px]  ${className}`} >
    <span> {title1} </span> <span className=' text-primary'> {title2}</span>
   </div>
 };

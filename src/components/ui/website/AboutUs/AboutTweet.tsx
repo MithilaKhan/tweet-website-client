@@ -8,7 +8,7 @@ const AboutTweet = () => {
    
       <div className=" pt-[32px] pb-[59px]">
     
-    <div className=' container flex items-center justify-between gap-x-5   '>
+    <div className=' container flex lg:flex-row flex-col items-center justify-between gap-x-5   '>
 
         <div className='  w-[100%] mb-3 lg:mb-0   '>
             <Heading className='py-7   ' title1='About' title2=' Tweet ' />
@@ -21,7 +21,7 @@ const AboutTweet = () => {
         </div>
 
         <div className=' w-full '>
-            <img src="/aboutTweet.svg" alt=''  className=' h-[400px] w-[588px] mt-5 ' />
+            <img src="/aboutTweet.svg" alt=''  className=' lg:h-[400px] h-full lg:w-[588px] w-full lg:mt-5 mt-3 ' />
         </div>
 
 

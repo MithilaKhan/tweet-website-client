@@ -77,8 +77,8 @@ const CustomerSaying = () => {
     return (
         <div className='py-20'>
           <section className="container w-full">
-      <div className="flex  items-center w-full gap-[73px]">
-        <div className="space-y-6 w-1/2">
+      <div className="flex lg:flex-row flex-col-reverse  items-center w-full lg:gap-[73px] gap-[20px]">
+        <div className="space-y-6 lg:w-1/2 w-full">
           <div className="space-y-2">
             <CommontypeTitle className="text-sm" title='Testimonial' /> 
             <div  className={` text-[#343B46]  font-[600] lg:text-[40px] text-[28px] `} >
@@ -135,7 +135,7 @@ const CustomerSaying = () => {
        
         </div>
         
-        <div className='w-1/2 flex items-center justify-center'> 
+        <div className='lg:w-1/2 w-full flex items-center justify-center'> 
  <Image src="/Container.png" alt='' height={522} width={638} className=' h-auto w-auto object-cover ' /> 
         </div> 
 

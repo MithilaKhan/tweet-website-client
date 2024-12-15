@@ -68,7 +68,7 @@ const Contact = () => {
           <h2 className="text-2xl font-semibold text-gray-800 mb-2">
             Get in touch with us
           </h2>
-          <p className="text-[#787878] mb-6">
+          <p className="text-[#787878] mb-6 leading-8">
             Have inquiries about our services or a specific request?
             <br />
             Feel free to get in touch, and we&apos;ll be happy to assist!

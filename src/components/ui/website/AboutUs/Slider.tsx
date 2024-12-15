@@ -66,15 +66,15 @@ const Slider = () => {
                                 key={heroes.id}
                                 className="embla__slide flex-[0_0_100%] min-w-0  "
                             >
-                                <div className=' container flex items-center justify-between gap-x-5    '>
+                                <div className=' container flex lg:flex-row flex-col items-center justify-between gap-x-5    '>
 
 
                                     <div className=' w-full '>
-                                        <img src={heroes?.image} alt='' className=' h-[382px] w-[588px] mt-5 ' />
+                                        <img src={heroes?.image} alt='' className=' lg:h-[382px] h-full lg:w-[588px] w-[100%] lg:mt-5 ' />
                                     </div>
 
                                     <div className='  w-[100%] mb-3 lg:mb-0   '>
-                                        <Heading className='py-7   ' title1={heroes?.title1} title2=' Tweet ' />
+                                        <Heading className='lg:py-7 py-3   ' title1={heroes?.title1} title2=' Tweet ' />
                                         <p className=' text-[#5C5C5C] font-[400] lg:text-[16px] text-[14px]  '>{heroes?.description}</p>
                                     </div>
 

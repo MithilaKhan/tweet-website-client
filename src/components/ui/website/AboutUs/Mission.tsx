@@ -6,7 +6,7 @@ const Mission = () => {
     return (
         <div className=" py-[100px]">
     
-        <div className=' container flex items-center justify-between gap-x-5   '>
+        <div className=' container flex lg:flex-row flex-col-reverse items-center justify-between gap-x-5   '>
     
             <div className='  w-[100%] mb-3 lg:mb-0   '>
                 <Heading className='py-7   ' title1='Our' title2=' Mission & Vision ' />
@@ -17,7 +17,7 @@ const Mission = () => {
             </div>
     
             <div className=' w-full '>
-                <img src="/mission.svg" alt=''  className=' h-[382px] w-[588px] mt-5 ' />
+                <img src="/mission.svg" alt=''  className=' lg:h-[382px] h-full lg:w-[588px] w-full mt-5 ' />
             </div>
     
     

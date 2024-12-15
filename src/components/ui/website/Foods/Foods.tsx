@@ -189,9 +189,9 @@ const Foods = () => {
     const router = useRouter()
     return (
         <div className=' container py-[52px]'>
-            <div className=' flex items-center justify-between pb-5'>
-                <Heading className='' title1="All" title2="Foods" />
-                <div className=' flex items-center  gap-2'>
+            <div className=' flex lg:flex-row flex-col lg:items-center lg:justify-between pb-5 lg:gap-0 gap-4'>
+                <Heading className='' title1="All" title2="Foods" /> 
+                <div className=' flex lg:flex-row flex-col lg:items-center items-end  lg:gap-2 gap-4'>
                     <div>
                         <Input placeholder="Search for restaurant"
                             style={{ width: 375, height: 45 }}

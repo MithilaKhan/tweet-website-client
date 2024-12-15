@@ -12,7 +12,7 @@ const CheckOut = () => {
         {/* Left Column */}
         <div className="space-y-6">
           <div className=" p-[50px] bg-white rounded-lg">
-            <div className="flex items-center justify-between  mb-4">
+            <div className="flex lg:flex-row flex-col lg:items-center lg:justify-between gap-2  mb-4">
               <h2 className="text-lg font-semibold">Delivery Address</h2>
               <button className="text-[#F06A28] hover:text-[#F06A28]/90 border border-primary  rounded-lg px-4 py-2">
                 Change
@@ -156,7 +156,7 @@ const CheckOut = () => {
                 </div>
                 <div className="flex justify-between pt-3 border-t">
                   <div className='flex items-center gap-1'>
-                    <span className="font-semibold text-[18px] text-[#333333]">Total Payable</span>
+                    <span className="font-semibold lg:text-[18px] text-[16px] text-[#333333]">Total Payable</span>
                     <span className="text-xs text-gray-500 block">(incl. VAT)</span>
                   </div>
                   <span className="text-[#F06A28] font-semibold text-[18px]">€130</span>

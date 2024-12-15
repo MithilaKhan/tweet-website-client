@@ -11,7 +11,7 @@ const NavItems = ({ items, onClose }: { items: any[]; onClose?: () => void }) =>
                         <Link
                               key={index}
                               onClick={onClose}
-                              className={`text-text-primary leading-4 flex items-center gap-2 text-[16px] font-[400] ${
+                              className={`text-[#5C5C5C] leading-4 flex items-center gap-2 text-[16px] font-[400] ${
                                     pathname === item.path ? 'bg-primary p-2 rounded drop-shadow text-white' : ''
                               }`}
                               href={item.path}

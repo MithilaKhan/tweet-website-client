@@ -88,7 +88,7 @@ const PopularCategory = () => {
   const [activeIndex, setActiveIndex] = useState(0); 
   const CustomNextArrow = ({ onClick  }: { onClick?: () => void }) => (
     <div
- className=" absolute  -right-10 top-1/3 cursor-pointer   "
+ className=" absolute lg:flex hidden  lg:-right-10 right-0 top-1/3 cursor-pointer   "
       onClick={onClick}
     > 
     <div className="w-10 h-10 bg-white/80  rounded-full flex items-center justify-center shadow-md">
@@ -100,7 +100,7 @@ const PopularCategory = () => {
   
   const CustomPrevArrow = ({ onClick }: { onClick?: () => void }) => (
     <div
-      className="absolute  -left-7 top-1/3 cursor-pointer z-30"
+      className="absolute lg:flex hidden  lg:-left-7 left-0 top-1/3 cursor-pointer z-30"
       onClick={onClick}
     > 
     <div className=" w-10 h-10 bg-white/80  rounded-full flex items-center justify-center shadow-md">
@@ -154,7 +154,7 @@ const PopularCategory = () => {
       {
         breakpoint: 1024,
         settings: {
-          slidesToShow: 3,
+          slidesToShow: 5,
           slidesToScroll: 1,
           infinite: true,
         },
@@ -162,7 +162,7 @@ const PopularCategory = () => {
       {
         breakpoint: 600,
         settings: {
-          slidesToShow: 2,
+          slidesToShow: 3,
           slidesToScroll: 1,
           initialSlide: 2,
         },
@@ -170,7 +170,7 @@ const PopularCategory = () => {
       {
         breakpoint: 480,
         settings: {
-          slidesToShow: 1,
+          slidesToShow: 2,
           slidesToScroll: 1,
         },
       },
@@ -181,18 +181,18 @@ const PopularCategory = () => {
 
 
   return (
-    <div className="py-[72px] flex items-center justify-center "> 
+    <div className="py-[72px] flex items-center justify-center lg:w-full md:w-[600px] w-[400px] lg:px-0 px-10 lg:mt-0 mt-[50px] "> 
     <div>
 
       {/* Heading */}
-      <div className=" pb-[36px] container ">
+      <div className=" lg:pb-[36px] pb-[20px] container ">
           <CommontypeTitle className="" title="Category" /> 
         <Heading title1="Popular" title2="Categories" className=" " />
         </div>
 
       {/* Slider */}
       <div className="w-full ">
-      <div className=" lg:w-[1300px] md:w-full w-full ">
+      <div className=" lg:w-[1300px] md:w-[600px]  w-[400px] ">
           <Slider {...settings}>
        
             {foodData.map((data) => (
@@ -202,7 +202,7 @@ const PopularCategory = () => {
                 className="flex justify-center items-center relative p-4 cursor-pointer "
               >
                 <div
-                  className="w-40 h-[128px] rounded-lg  flex flex-col justify-end items-center pt-1  "
+                  className="lg:w-40 w-36 lg:h-[128px] h-[120px] rounded-lg  flex flex-col justify-end items-center pt-1  "
                   style={{ backgroundColor: data.bgColor }}
                 > 
                   <div className=" z-20  absolute -top-0 ">
@@ -212,7 +212,7 @@ const PopularCategory = () => {
                       width={139} 
                       height={94}
                     
-                 className="z-20 pt-1"
+                 className="z-20 pt-1 "
                     />
                   </div>
                   <p className="text-white text-lg font-semibold px-4">

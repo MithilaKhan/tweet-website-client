@@ -4,7 +4,7 @@ import React, { useState } from 'react';
 
 import { ClockCircleOutlined } from "@ant-design/icons";
 import { FaPlus } from "react-icons/fa";
-import { IoBicycle, IoHeart, IoHeartSharp } from "react-icons/io5";
+import { IoBicycle } from "react-icons/io5";
 import { PiSealPercentLight } from "react-icons/pi";
 import { TiStarFullOutline } from "react-icons/ti";
 import { GoHeart, GoHeartFill } from 'react-icons/go';
@@ -35,7 +35,7 @@ const SingleFoodCard = ({ item }: ItemType) => {
     return (
         <div 
 
-            className="relative overflow-hidden shadow-md hover:shadow-lg transition-shadow bg-white rounded-lg lg:w-[297px] w-full" >
+            className="relative overflow-hidden shadow-md hover:shadow-lg transition-shadow bg-white rounded-lg lg:w-[297px] w-[320px] " >
         
                 <div className="relative">
                     <img

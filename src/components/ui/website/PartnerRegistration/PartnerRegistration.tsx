@@ -12,9 +12,9 @@ const PartnerRegistration = () => {
                 <Heading title1='Excited to Partner with Us? Boost Your Revenue Today! 
  Complete the form below!' title2='' className=' text-center pb-6  ' /> 
 
-<p className='text-[#5C5C5C] mb-10 text-center mx-28'>We’re on a mission to deliver the best in life—delicious food and an upgraded shopping experience. Tweet is a fast-growing company that keeps its charm as a locally focused service with a strong community connection.</p>  
+<p className='text-[#5C5C5C] mb-10 text-center lg:mx-28'>We’re on a mission to deliver the best in life—delicious food and an upgraded shopping experience. Tweet is a fast-growing company that keeps its charm as a locally focused service with a strong community connection.</p>  
 
-<div className='p-9 bg-white rounded-xl '> 
+<div className='lg:p-9 p-4 bg-white rounded-xl '> 
  <p className='text-[24px] font-semibold pb-6 text-[#333333] '>Restaurant Information</p>
 <RegistrationForm />
 </div>

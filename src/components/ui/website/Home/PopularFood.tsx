@@ -85,50 +85,7 @@ const foodItems = [
       discount: "50% OFF",
       deliveryPrice: "$02"
   },
-  {
-      id: 8,
-      title: "Cheese Strudel",
-      restaurant: "Burger King",
-      time: "25 min",
-      rating: 4.8,
-      price: "€44.99",
-      image: "/food8.png",
-      discount: "50% OFF",
-      deliveryPrice: "$02"
-  },
-  {
-      id: 9,
-      title: "Burger with Emmentaler Cheese",
-      restaurant: "Burger King",
-      time: "25 min",
-      rating: 4.5,
-      price: "€44.99",
-      image: "/food1.png",
-      discount: "50% OFF",
-      deliveryPrice: "$02"
-  },
-  {
-      id: 10,
-      title: "Tandoori Chicken",
-      restaurant: "Burger King",
-      time: "35 min",
-      rating: 4.8,
-      price: "€44.99",
-      image: "/food2.png",
-      discount: "50% OFF",
-      deliveryPrice: "$02"
-  },
-  {
-      id: 11,
-      title: "Döner Kebab",
-      restaurant: "Burger King",
-      time: "30 min",
-      rating: 4.7,
-      price: "€44.99",
-      image: "/food3.png",
-      discount: "50% OFF",
-      deliveryPrice: "$02"
-  },
+
 ]; 
 
 const PopularFood = () => { 
@@ -136,7 +93,7 @@ const PopularFood = () => {
   const router = useRouter();
   const CustomNextArrow = ({ onClick  }: { onClick?: () => void }) => (
     <div
- className=" absolute  -right-10 top-1/3 cursor-pointer  "
+ className=" absolute lg:flex hidden  -right-10 top-1/3 cursor-pointer  "
       onClick={onClick}
     > 
     <div className="w-10 h-10 bg-white/80  rounded-full flex items-center justify-center shadow-md">
@@ -148,7 +105,7 @@ const PopularFood = () => {
   
   const CustomPrevArrow = ({ onClick }: { onClick?: () => void }) => (
     <div
-      className="absolute  -left-10 top-1/3 cursor-pointer"
+      className="absolute lg:flex hidden -left-10 top-1/3 cursor-pointer"
       onClick={onClick}
     > 
     <div className=" w-10 h-10 bg-white/80  rounded-full flex items-center justify-center shadow-md">
@@ -175,24 +132,24 @@ const PopularFood = () => {
     customPaging: (i) => (
       <div
         style={{
-          width: "35px",
-          height: "3px",
+         
           borderRadius: "5px",
           backgroundColor: i === activeIndex ? "#ED6923" : "#D3D3D3",
           cursor: "pointer",
           transition: "background-color 0.3s ease",
           marginTop: "20px"
-        }}
+        }} 
+        className=' lg:w-[35px] w-[20px] h-[3px]'
       />
     ),
     appendDots: (dots) => (
       <div
-        style={{
-          display: "flex",
-          justifyContent: "center",
-          padding: "10px",
-          gap: "10px"
-        }}
+   style={{ 
+    display: "flex",
+    justifyContent: "center",  
+    gap: "8px" 
+   }}
+       
       >
         {dots}
       </div>
@@ -226,24 +183,24 @@ const PopularFood = () => {
   };  
 
   return (
-    <div className='py-[75px] flex items-center justify-center  '>  
+    <div className='lg:py-[75px] py-[50px] flex items-center justify-center lg:w-full md:w-[600px] w-[400px]  '>  
 
     <div>
 
       <div className="pb-[36px] container">
-        <div className='flex items-center justify-between'>
+        <div className='flex lg:flex-row flex-col lg:items-center lg:justify-between'>
           <div>
             <CommontypeTitle title="Popular Food" className="" />
             <Heading title1="Popular" title2="Food Near me" className="" />
           </div>
 
-          <button className=' border border-primary text-primary  px-8 rounded-lg h-[48px] hover:bg-primary hover:text-white font-medium'  onClick={() => router.push(`/foods`)} > View All </button>
+          <button className=' border border-primary text-primary  px-8 rounded-lg h-[48px] hover:bg-primary hover:text-white font-medium lg:mt-0 mt-3'  onClick={() => router.push(`/foods`)} > View All </button>
         </div>
       </div>  
 
       {/* Slider */}
       <div className="w-full ">
-      <div className="  lg:w-[1300px] md:w-full w-full ">
+      <div className="  lg:w-[1300px]  md:w-[600px] w-[400px]  ">
           <Slider {...settings}>
      
 

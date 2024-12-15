@@ -17,7 +17,7 @@ const JoinWithUs = () => {
             className=" "
           />
         </div>
-        <div className="space-y-6">
+        <div className="lg:space-y-6 space-y-4">
           <div>
             <CommontypeTitle className="text-gray-600 mb-2" title='Restaurant listing' /> 
             <div  className={` text-[#343B46]  font-[600] lg:text-[40px] text-[28px] leading-tight`} >
@@ -26,10 +26,10 @@ const JoinWithUs = () => {
   </div>
             
           </div>
-          <p className="text-gray-600 leading-relaxed text-[16px] tracking-wide">
+          <p className="text-gray-600 leading-relaxed lg:text-[16px] text-[14px] tracking-wide">
             Join us and make it easy to fast known across the city to find and order from your restaurant. With our platform, you can grow your brand, increase your orders, and reach new customers every day.
           </p>
-          <p className="text-gray-600 leading-relaxed tracking-wide pb-6">
+          <p className="text-gray-600 leading-relaxed tracking-wide lg:text-[16px] text-[14px] lg:pb-6 pb-3">
             We&apos;re here to help you grow your business through digital marketing. As a restaurant partner with us, we&apos;ll work together to make your restaurant thrive in the community. Start today, and see how many more people you can reach!
           </p> 
 
