@@ -9,7 +9,7 @@ import { CiEdit } from 'react-icons/ci';
 import { useState } from 'react'; 
 import { LuHistory } from "react-icons/lu"
 import { MdOutlineLocalOffer } from "react-icons/md"
-import { FiHelpCircle } from "react-icons/fi"
+
 import { RiLogoutBoxLine } from "react-icons/ri"
 import { PiSealPercent } from 'react-icons/pi';
 

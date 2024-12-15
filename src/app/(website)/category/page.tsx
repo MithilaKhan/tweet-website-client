@@ -1,10 +1,12 @@
 import Category from '@/components/ui/website/Category/Category';
-import React from 'react';
+import React, { Suspense } from 'react';
 
 const CategoryPage = () => {
     return (
         <div>
-           <Category />
+     <Suspense fallback={<div>Loading...</div>}>
+      <Category />
+    </Suspense>
         </div>
     );
 };
