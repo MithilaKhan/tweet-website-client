@@ -3,9 +3,10 @@ import CommontypeTitle from '@/components/shared/CommontypeTitle';
 import Heading from '@/components/shared/Heading';
 import SingleRestaurantCard from '@/components/shared/SingleRestaurantCard';
 import { useRouter } from 'next/navigation';
-import React, { useState } from 'react';
-import { FaArrowLeftLong, FaArrowRightLong } from 'react-icons/fa6';
-import Slider, { Settings } from 'react-slick'; 
+import React from 'react';
+import { Swiper, SwiperSlide } from 'swiper/react';
+import { Navigation, Autoplay } from 'swiper/modules';
+import { BiChevronLeft, BiChevronRight } from 'react-icons/bi';
 
 const foodItems = [
   {
@@ -89,130 +90,98 @@ const foodItems = [
 ]; 
 
 const PopularRestaurant = () => { 
-    const [activeIndex, setActiveIndex] = useState(0);  
     const router = useRouter();
-  const CustomNextArrow = ({ onClick  }: { onClick?: () => void }) => (
-    <div
- className=" absolute lg:flex hidden  -right-10 top-1/3 cursor-pointer  "
-      onClick={onClick}
-    > 
-    <div className="w-10 h-10 bg-white/80  rounded-full flex items-center justify-center shadow-md">
 
-      <FaArrowRightLong color="#767676" size={20} />
-    </div>
-    </div>
-  );
-  
-  const CustomPrevArrow = ({ onClick }: { onClick?: () => void }) => (
-    <div
-      className="absolute lg:flex hidden   -left-10 top-1/3 cursor-pointer"
-      onClick={onClick}
-    > 
-    <div className=" w-10 h-10 bg-white/80  rounded-full flex items-center justify-center shadow-md">
-
-      <FaArrowLeftLong color="#767676" size={20} />
-    </div>
-    </div>
-  ); 
-
-  
-  const settings: Settings = {
-    infinite: false,
-    speed: 500,
-    initialSlide: 0,
-    // arrows: true, 
-    slidesToShow: 4,
-    slidesToScroll: 1,
-    autoplay: false,
-    dots: true,
-    autoplaySpeed: 2000,  
-    nextArrow: <CustomNextArrow />,
-  prevArrow: <CustomPrevArrow />,
-    beforeChange: (current, next) => setActiveIndex(next),
-    customPaging: (i) => (
-      <div
-        style={{
-          borderRadius: "5px",
-          backgroundColor: i === activeIndex ? "#ED6923" : "#D3D3D3",
-          cursor: "pointer",
-          transition: "background-color 0.3s ease",
-          marginTop: "20px"
-        }} 
-         className=' lg:w-[35px] w-[20px] h-[3px]'
-      />
-    ),
-    appendDots: (dots) => (
-      <div
-        style={{
-          display: "flex",
-          justifyContent: "center",
-          gap: "8px"
-        }}
-      >
-        {dots}
-      </div>
-    ),
-
-    responsive: [
-      {
-        breakpoint: 1024,
-        settings: {
-          slidesToShow: 3,
-          slidesToScroll: 1,
-          infinite: true,
-        },
-      },
-      {
-        breakpoint: 600,
-        settings: {
-          slidesToShow: 2,
-          slidesToScroll: 1,
-          initialSlide: 2,
-        },
-      },
-      {
-        breakpoint: 480,
-        settings: {
-          slidesToShow: 1,
-          slidesToScroll: 1,
-        },
-      },
-    ],
-  };  
     return (
-        <div className='lg:py-[75px] py-[50px] flex items-center justify-center lg:w-full md:w-[600px] w-[400px] '>  
+    <section className="py-12 md:py-16 lg:py-20  ">
+      <div className="container mx-auto px-2 lg:px-8">
+        {/* Header Section */}
+        <div className="flex flex-col lg:flex-row lg:items-center lg:justify-between pb-10 w-full">
+          <div className="mb-6 lg:mb-0 w-full">
+            <CommontypeTitle title="Popular Restaurant" className="text-lg font-semibold text-gray-600" />
+            <Heading
+              title1="Popular"
+              title2="Restaurant Near me"
+              className="text-3xl md:text-4xl font-bold text-gray-800 mt-2"
+            />
+          </div> 
+          <div className='  '> 
+          <button
+            onClick={() => router.push('/restaurants')}
+            className="flex items-center justify-center w-[120px] h-[45px] px-5  text-base font-medium text-primary border border-primary rounded-lg hover:bg-primary hover:text-white transition-colors duration-300"
+          >
+            View All
+          </button>
+          </div>
+        </div>
 
-        <div>
-    
-          <div className="pb-[36px] container">
-            <div className='flex lg:flex-row flex-col lg:items-center lg:justify-between'>
-              <div>
-                <CommontypeTitle title="Popular Restaurant" className="" />
-                <Heading title1="Popular" title2=" Restaurant Near me" className="" />
-              </div>
-    
-              <button  onClick={() => router.push(`/restaurants`)} className=' border border-primary text-primary  px-8 rounded-lg h-[48px] hover:bg-primary hover:text-white font-medium lg:mt-0 mt-3'  > View All </button>
-            </div>
-          </div>  
-    
-          {/* Slider */}
-          <div className="w-full ">
-          <div className="  lg:w-[1300px]  md:w-[600px] w-[400px] ">
-              <Slider {...settings}>
-         
-    
-              {foodItems.map((item) => <div key={item.id} className=' mx-4 cursor-pointer' onClick={() => router.push(`/restaurants`)}> <SingleRestaurantCard item={item} /></div>)}
-           
-              </Slider>
-            </div> 
-            
-            </div>  
-    
+        {/* Swiper Slider */}
+        <div className="relative">
+          <Swiper
+            modules={[Navigation, Autoplay]}
+            spaceBetween={12}
+            slidesPerView={1}
+            navigation={{
+              prevEl: ".swiper-button-prev",
+              nextEl: ".swiper-button-next",
+            }}
+            // pagination={{
+            //   clickable: true,
+            //   el: '.swiper-pagination',
+            //   bulletClass: 'swiper-pagination-bullet',
+            //   bulletActiveClass: 'swiper-pagination-bullet-active',
+            // }}
+            autoplay={{
+              delay: 3000,
+              // disableOnInteraction: false,
+            }}
+            breakpoints={{
+              640: {
+                slidesPerView: 2,
+                spaceBetween: 20,
+              },
+              1024: {
+                slidesPerView: 3,
+                spaceBetween: 24,
+              },
+              1280: {
+                slidesPerView: 4,
+                spaceBetween: 20,
+              },
+            }}
+            className="mySwiper "
+          >
+            {foodItems.map((item) => (
+              <SwiperSlide key={item.id}>
+                <div
+                  className="cursor-pointer px-2 flex items-center justify-center pb-3"
+                  onClick={() => router.push('/food/1')}
+                >
+                  <SingleRestaurantCard item={item} />
+                </div>
+              </SwiperSlide>
+            ))}
+          </Swiper>
+
+          {/* Custom Navigation Arrows */}
+          <button
+            className="swiper-button-prev absolute z-10 top-[40%] bg-primary p-1 rounded-full shadow-md"
+            style={{ height: "40px", width: "40px", left: "-2px" }}
+          >
+            <BiChevronLeft size={24} color="white" />
+          </button>
+          <button
+            className="swiper-button-next absolute z-10 top-[40%] bg-primary p-1 rounded-full shadow-md"
+            style={{ height: "40px", width: "40px", right: "-2px" }}
+          >
+            <BiChevronRight size={24} color="white" />
+          </button>
+
+          {/* Custom Pagination */}
+          {/* <div className="swiper-pagination mt-6 flex justify-center gap-2" />  */}
         </div>
-    
-    
-    
-        </div>
+      </div>
+    </section>
     );
 };
 

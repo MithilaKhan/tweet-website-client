@@ -316,7 +316,7 @@ const Restaurants = () => {
                             <div
                                 key={item.id}
                                 className="mx-4 cursor-pointer"
-                                onClick={() => router.push(`/food`)}
+                                onClick={() => router.push(`/food/1`)}
                             >
                                 <SingleRestaurantCard item={item} />
                             </div>

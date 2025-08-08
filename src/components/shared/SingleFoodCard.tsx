@@ -26,7 +26,7 @@ interface ItemType {
 }
 const SingleFoodCard = ({ item }: ItemType) => { 
     const [isFavorite, setIsFavorite] = useState(false) 
-    console.log(isFavorite);
+ 
     const handleFavorite = (e: React.MouseEvent) => {
         e.stopPropagation();
         e.preventDefault();
@@ -43,8 +43,6 @@ const SingleFoodCard = ({ item }: ItemType) => {
                         src={item.image}
                         className="h-48 w-full object-cover z-0"
                     />
-
-
 
                     <div
                         className=" absolute top-3 left-0  text-white flex items-center justify-center gap-1 text-[12px] bg-primary px-3 rounded-r-full py-2 "
