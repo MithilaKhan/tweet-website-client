@@ -1,75 +1,73 @@
 @tailwind base;
 @tailwind components;
-@tailwind utilities; 
+@tailwind utilities;
 
 /* slick-carousel styles */
 @import "~slick-carousel/slick/slick.css";
 @import "~slick-carousel/slick/slick-theme.css";
- 
 
 .ant-form-item {
-    margin-bottom: 15px !important;
-  }
+  margin-bottom: 15px !important;
+}
 
-  .footerInput.ant-input-affix-wrapper { 
- padding: 4px  0px 4px 10px !important;
-  } 
+.footerInput.ant-input-affix-wrapper {
+  padding: 4px 0px 4px 10px !important;
+}
 
-  .footerInput.ant-input-outlined { 
-    background:#181D21 !important; 
-    border-color:transparent !important; 
-   } 
+.footerInput.ant-input-outlined {
+  background: #181d21 !important;
+  border-color: transparent !important;
+}
 
-   .footerInput.ant-input-affix-wrapper >input.ant-input {
-    color: white; 
-   }  
+.footerInput.ant-input-affix-wrapper > input.ant-input {
+  color: white;
+}
 
-  .heroInput.ant-input-affix-wrapper { 
- padding: 4px  0px 4px 10px !important;
-  } 
+.heroInput.ant-input-affix-wrapper {
+  padding: 4px 0px 4px 10px !important;
+}
 
-  .heroInput.ant-input-outlined { 
-    background:white !important; 
-    border: 1px solid #ED6923  !important; 
-   }  
+.heroInput.ant-input-outlined {
+  background: white !important;
+  border: 1px solid #ed6923 !important;
+}
 
-  .checkout.ant-input-outlined { 
-    background:white !important; 
-    border: 1px dotted #b8b6b5  !important; 
-   }  
+.checkout.ant-input-outlined {
+  background: white !important;
+  border: 1px dotted #b8b6b5 !important;
+}
 
-   .heroInput.ant-input-affix-wrapper { 
-    padding: 4px  0px 4px 10px !important;
-     }
-     
-     .checkout.ant-input-affix-wrapper { 
-    padding: 4px  0px 4px 10px !important;
-     }  
+.heroInput.ant-input-affix-wrapper {
+  padding: 4px 0px 4px 10px !important;
+}
 
-   .heroInput.ant-input-affix-wrapper >input.ant-input {
-    color: #333333; 
-   } 
+.checkout.ant-input-affix-wrapper {
+  padding: 4px 0px 4px 10px !important;
+}
 
-   .swal-popup {
-    font-family: "Montserrat", sans-serif; /* Optional: use your desired font */
-  }
-  
-  .swal-title {
-    font-size: 24px; 
-    color: #ED6923;
-  }
-  
-  .swal2-success [class^=swal2-success-line] {
-    background-color: #ED6923 !important;
-  }
+.heroInput.ant-input-affix-wrapper > input.ant-input {
+  color: #333333;
+}
 
-  .swal2-success .swal2-success-ring { 
-    border: 3px solid #ED6923 !important;
-    color: #ED6923 !important;
-   } 
+.swal-popup {
+  font-family: "Montserrat", sans-serif; /* Optional: use your desired font */
+}
 
+.swal-title {
+  font-size: 24px;
+  color: #ed6923;
+}
 
-   /* Ant Design Custom Styles */
+.swal2-success [class^="swal2-success-line"] {
+  background-color: #ed6923 !important;
+}
+
+.swal2-success .swal2-success-ring {
+  border: 3px solid #ed6923 !important;
+  color: #ed6923 !important;
+}
+
+/* Ant Design Custom Styles */
 .ant-input-affix-wrapper {
   border-radius: 0.5rem !important;
   padding: 8px 16px !important;
@@ -78,16 +76,13 @@
 .ant-input-affix-wrapper:hover,
 .ant-input-affix-wrapper:focus,
 .ant-input-affix-wrapper-focused {
-  border-color: #FF6B35 !important;
+  border-color: #ff6b35 !important;
   box-shadow: none !important;
 }
 
-
-
 .ant-rate {
   font-size: 14px !important;
-} 
-
+}
 
 /* Custom styles for Ant Design Carousel dots */
 .custom-dots {
@@ -95,7 +90,7 @@
 }
 
 .custom-dots li button {
-  background: #D1D5DB !important;
+  background: #d1d5db !important;
   opacity: 0.5;
   width: 8px !important;
   height: 8px !important;
@@ -103,13 +98,11 @@
 }
 
 .custom-dots li.slick-active button {
-  background: #F97316 !important;
+  background: #f97316 !important;
   opacity: 1;
   width: 24px !important;
   border-radius: 4px !important;
 }
- 
-
 
 /* Custom styles for Ant Design white checkboxes */
 .antd-checkbox-white .ant-checkbox-inner {
@@ -123,7 +116,7 @@
 }
 
 .antd-checkbox-white .ant-checkbox-checked .ant-checkbox-inner::after {
-  border-color: #E85D24 !important;
+  border-color: #e85d24 !important;
 }
 
 .antd-checkbox-white .ant-checkbox-wrapper:hover .ant-checkbox-inner,
@@ -139,10 +132,10 @@
   color: white !important;
 }
 
-.ant-rate {  
-  color: #ED6923 !important; 
+.ant-rate {
+  color: #ed6923 !important;
   font-size: 22px;
-} 
+}
 
 ::-webkit-scrollbar {
   width: 6px;
@@ -156,7 +149,6 @@
 
 /* Handle */
 ::-webkit-scrollbar-thumb {
-
   /* background: #6b5ecc34;  */
   background: #ffffff67;
   border-radius: 10px;
@@ -165,11 +157,10 @@
 /* Handle on hover */
 ::-webkit-scrollbar-thumb:hover {
   background: #6b5ecc34;
-} 
+}
 
-.food.ant-modal .ant-modal-close { 
-color: #ED6923 !important; 
-
+.food.ant-modal .ant-modal-close {
+  color: #ed6923 !important;
 }
 
 /* for swiper  */
@@ -180,8 +171,7 @@ color: #ED6923 !important;
 
 .swiper {
   padding: 0 2px;
-} 
-
+}
 
 .swiper-button-prev {
   height: 40px !important;
@@ -196,6 +186,3 @@ color: #ED6923 !important;
   position: absolute;
   right: -2px !important;
 }
-
-
-   

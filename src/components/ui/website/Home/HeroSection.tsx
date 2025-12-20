@@ -13,46 +13,60 @@ import { useRouter } from "next/navigation";
 const rancho = Rancho({ subsets: ["latin"], weight: "400" });
 
 const HeroSection = () => {
-  const router = useRouter()
+  const router = useRouter();
   return (
     <main className="bg-gradient-to-r from-[#fddac6] to-[#f8e4da] lg:h-[calc(775px)] h-full flex items-center justify-center">
       <div className="container mx-auto lg:relative flex items-center">
         <div className="grid lg:grid-cols-2 grid-cols-1 gap-4 items-center">
           {/* Left Section */}
           <div className="w-full">
-            <h2 className={`text-primary lg:text-[100px] md:text-[60px] text-[45px] font-normal tracking-tight  ${rancho.className}`}>Hungry?</h2>
+            <h2
+              className={`text-primary lg:text-[100px] md:text-[60px] text-[45px] font-normal tracking-tight  ${rancho.className}`}
+            >
+              Hungry?
+            </h2>
             <h1 className="lg:text-[72px] md:text-[44px] text-[36px] font-[#000000] font-bold tracking-tight  ">
               Let Us <span className="text-primary">Bring</span>
             </h1>
-            <h1 className="lg:text-[72px] md:text-[44px] text-[36px] font-bold text-primary mb-2 tracking-tight">The Feast to You</h1>
+            <h1 className="lg:text-[72px] md:text-[44px] text-[36px] font-bold text-primary mb-2 tracking-tight">
+              The Feast to You
+            </h1>
 
             <p className="text-gray-700 lg:text-lg text-[16px] mb-8 max-w-xl">
-              Explore hundreds of delicious options from top restaurants and enjoy fast, reliable delivery right to you.
+              Explore hundreds of delicious options from top restaurants and
+              enjoy fast, reliable delivery right to you.
             </p>
 
             {/* Search Bar */}
             <div className="flex gap-2 max-w-xl">
               <Input
-
                 placeholder="Enter your location"
-                prefix={<EnvironmentOutlined className="text-gray-400" size={20} />}
+                prefix={
+                  <EnvironmentOutlined className="text-gray-400" size={20} />
+                }
                 suffix={
                   <div className=" flex items-center gap-1">
-
-                    <button className="text-primary hover:text-[#FF8B35] text-[16px] flex items-center gap-1 px-3"> <span> <IoMdLocate size={16} />  </span> <span> Locate me </span> </button>
+                    <button className="text-primary hover:text-[#FF8B35] text-[16px] flex items-center gap-1 px-3">
+                      {" "}
+                      <span>
+                        {" "}
+                        <IoMdLocate size={16} />{" "}
+                      </span>{" "}
+                      <span> Locate me </span>{" "}
+                    </button>
                     <button
                       type="submit"
-                      onClick={() => { router.push("/restaurants") }}
-                      className="bg-primary text-white px-5 text-xl font-medium  rounded-r-lg flex items-center justify-center lg:h-[64px] h-[50px]">
+                      onClick={() => {
+                        router.push("/restaurants");
+                      }}
+                      className="bg-primary text-white px-5 text-xl font-medium  rounded-r-lg flex items-center justify-center lg:h-[64px] h-[50px]"
+                    >
                       Find Food
                     </button>
                   </div>
                 }
-
-
                 className="flex-grow lg:h-[64px] h-[50px] heroInput"
               />
-
             </div>
           </div>
 
@@ -62,7 +76,6 @@ const HeroSection = () => {
             <img
               src="/bannerimg.svg"
               alt="Happy customer with burger"
-
               className="lg:object-cover object-fill lg:h-[533px] h-[400px] lg:w-[690px] w-full rounded-md "
             />
 
@@ -97,7 +110,9 @@ const HeroSection = () => {
                 </div>
 
                 <div>
-                  <p className="font-semibold text-center lg:pb-2.5  pb-1">Satisfied Customer</p>
+                  <p className="font-semibold text-center lg:pb-2.5  pb-1">
+                    Satisfied Customer
+                  </p>
                   <div className="flex items-center gap-1">
                     <FaStar size={18} color="#F4C700" />
                     <span className="text-sm text-gray-500">5.0</span>
@@ -121,13 +136,21 @@ const HeroSection = () => {
                   <div className="flex-grow">
                     <div className="flex justify-between items-start">
                       <div>
-                        <h3 className="font-semibold text-[16px]">Flavor Fusion Bistro</h3>
-                        <p className="text-sm text-gray-500">Kaliurang, Seleman</p>
+                        <h3 className="font-semibold text-[16px]">
+                          Flavor Fusion Bistro
+                        </h3>
+                        <p className="text-sm text-gray-500">
+                          Kaliurang, Seleman
+                        </p>
                       </div>
-
                     </div>
                     <div className="flex items-center gap-1 mt-2">
-                      <Rate disabled defaultValue={4.9} count={1} className="text-primary" />
+                      <Rate
+                        disabled
+                        defaultValue={4.9}
+                        count={1}
+                        className="text-primary"
+                      />
                       <span className="text-sm">4.9</span>
                     </div>
                   </div>
@@ -138,7 +161,9 @@ const HeroSection = () => {
             {/* 24/7 Delivery Badge */}
             <div className="absolute right-0 lg:-bottom-10 bottom-14     lg:bg-white/50 bg-white/80 backdrop-blur rounded-xl p-5 shadow-lg flex items-center gap-4 px-6">
               <div className=" bg-[#F5EAE3] w-9 h-9 rounded-full flex items-center justify-center ">
-                <p><LiaShippingFastSolid size={23} color="#ED6923" /></p>
+                <p>
+                  <LiaShippingFastSolid size={23} color="#ED6923" />
+                </p>
               </div>
 
               <div>
@@ -150,7 +175,6 @@ const HeroSection = () => {
         </div>
       </div>
     </main>
-
   );
 };
 
